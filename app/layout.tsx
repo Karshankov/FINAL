@@ -8,6 +8,7 @@ import { Toaster } from 'sonner';
 import { ConvexReactClient } from "convex/react";
 import { env } from 'process';
 
+
 const convex = new ConvexReactClient("https://healthy-gull-205.convex.cloud");
 const inter = Inter({ subsets: ['latin'] });
 
@@ -24,6 +25,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
+  
+
   return (
     
     <ConvexClientProvider>

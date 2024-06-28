@@ -164,50 +164,12 @@ model UserProgress {
   @@index([chapterId])
 }
 
-//Тесты------------------------------------------
-
-model Tests {
-  id        String  @id @default(uuid())
-  title     String
-  questions String
-  answer1   String
-  answer2   String
-  answer3   String?
-  answer4   String?
+model QuizForms {
+  id     String  @id @default(cuid())
+  userId String
+  title  String
+  src    String?
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
-
-model Quiz {
-  id          String     @id @default(cuid())
-  name        String
-  userId      String
-  isPublished Boolean
-  questions   Question[]
-
-  createdAt DateTime @default(now())
-}
-
-model Question {
-  id            String   @id @default(cuid())
-  quizId        String
-  question      String
-  answers       Answer[]
-  correctAnswer Int
-  Quiz          Quiz     @relation(fields: [quizId], references: [id])
-
-  createdAt DateTime @default(now())
-}
-
-model Answer {
-  id         String   @id @default(cuid())
-  questionId String
-  answer     String
-  isCorrect  Boolean  @default(false)
-  Question   Question @relation(fields: [questionId], references: [id])
-
-  createdAt DateTime @default(now())
-}
-
-//Тесты------------------------------------------

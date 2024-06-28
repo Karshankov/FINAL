@@ -24,12 +24,12 @@ const guestRoutes = [
   {
     icon: NotebookText,
     label: 'Заметки',
-    href: '/documents',
+    href: 'https://lms-alovt-notion.netlify.app/',
   },
   {
     icon: ClipboardPenLine,
     label: 'Тесты',
-    href: '/quiz',
+    href: '/searchQuiz',
   },
 ];
 const teacherRoutes = [

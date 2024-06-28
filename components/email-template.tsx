@@ -9,6 +9,6 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
  username,
 }) => (
  <div>
- <h1>Welcome, {username}!</h1>
+ <h1>Учащийся {username} отправил файл</h1>
  </div>
 );
