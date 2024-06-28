@@ -49,11 +49,6 @@ const teacherRoutes = [
     label: 'Тесты',
     href: '/teacher/quiz',
   },
-  {
-    icon: UserRoundCog,
-    label: 'Панель учителя',
-    href: '/teacher/admin',
-  },
 ];
 
 export const SidebarRoutes = () => {

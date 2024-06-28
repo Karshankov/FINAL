@@ -4,11 +4,6 @@ import { Sidebar } from './_components/sidebar';
 import { redirect } from 'next/navigation';
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
-
-  const { sessionClaims } = auth();
-    if (sessionClaims?.metadata.role !== "Преподаватель" && sessionClaims?.metadata.role !== "Учащийся") {
-    redirect("/401");
-}
   
 
   return (

@@ -26,7 +26,7 @@ export const ChapterActions = ({
 
             await axios.delete(`/api/quiz/${quizId}`);
 
-            toast.success("Задание удалена");
+            toast.success("Тест удален");
             router.refresh();
             router.push(`/teacher/quiz`);
         }catch{

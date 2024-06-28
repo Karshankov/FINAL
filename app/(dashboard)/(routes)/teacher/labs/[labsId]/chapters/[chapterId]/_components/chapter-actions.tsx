@@ -55,7 +55,7 @@ export const ChapterActions = ({
 
             await axios.delete(`/api/labs/${labsId}/chapters/${chapterId}`);
 
-            toast.success("Задание удалена");
+            toast.success("Задание удалено");
             router.refresh();
             router.push(`/teacher/labs/${labsId}`);
         }catch{
